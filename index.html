@@ -1,7 +1,62 @@
-echo "# Projet_7_kasa" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Lorenzobenitez87/Projet_7_kasa.git
-git push -u origin main
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasa</title>
+</head>
+
+<body>
+    <div id="root"> Bonjour Openclassrooms ;) </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>console.log(React)</script>
+
+    <script type="text/babel">
+
+        function Header() {
+            const titre = "La maison jungle"
+            return <h1>{titre}</h1>
+        }
+
+        function Cart() {
+            const monsteraPrice = 8
+            const ivyPrice = 10
+            const flowerPrice = 15
+            return (<div>
+                <h2>Panier</h2>
+                <ul>
+                    <li>Monstera : {monsteraPrice}€</li>
+                    <li>Lierre : {ivyPrice}€</li>
+                    <li>Fleurs : {flowerPrice}€</li>
+                </ul>
+                Total : {monsteraPrice + ivyPrice + flowerPrice}€
+            </div>)
+        }
+
+
+        function Description() {
+            const text = "Ici achetez toutes les plantes dont vous avez toujours rêvées"
+            const emojis = "🤑🤑🤑"
+            return (<p>{text.slice(0, 61) + emojis}</p>)
+        }
+
+        function Banner() {
+            return (<div>
+                <Header />
+                <Cart />
+            </div>)
+        }
+
+        ReactDOM.render(<Banner />, document.getElementById("root"))
+
+    </script>
+
+</body>
+
+</html>
