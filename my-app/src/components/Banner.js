@@ -4,9 +4,9 @@ import logo from '../assets/logo.png'
 function Banner() {
     const title = "La maison jungle"
     return (
-    <div className='Lmj-banner'>
-        <img src={logo} alt='Logo Kasa' className='Lmj-logo' />
-        <h1 className='Lmj-title'>{title.toUpperCase()}</h1>
+    <div className='lmj-banner'>
+        <img src={logo} alt='Logo Kasa' className='lmj-logo' />
+        <h1 className='lmj-title'>{title.toUpperCase()}</h1>
         </div>
         )
 }
